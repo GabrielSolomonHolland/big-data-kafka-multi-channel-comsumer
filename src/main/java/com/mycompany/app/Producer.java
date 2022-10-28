@@ -14,7 +14,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 public class Producer {
-    public static void main(String[] args) throws FileNotFoundException // bad programming, but not many options here
+    public static void main(String[] args) throws FileNotFoundException //bad programming, but not many options here
     {
         
         String bootstrapServers = "localhost:9092";        
@@ -32,9 +32,9 @@ public class Producer {
 
         // TODO: set up "channels" (option 1: topic names, option 2: key names)
         // MAKE THESE NAMES MAKE SENSE; DO NOT USE THE DEFAULTS
-        channels.add("ch1");
-        channels.add("ch2");
-        channels.add("ch3");
+        channels.add("Rack1Temps");
+        channels.add("Rack2Temps");
+        channels.add("Rack3Temps");
 
         // option 2: set topic name
         //String topic = "";
@@ -62,7 +62,7 @@ public class Producer {
                     ProducerRecord<String, String> record = null;
                     // TODO: Uncomment the appropriate option
                     // Option 1
-                    // record = new ProducerRecord(target, payload);
+                    record = new ProducerRecord(target, payload);
                     // Option 2
                     // record = new ProducerRecord<>(topic, target, payload);
                     producer.send(record);
