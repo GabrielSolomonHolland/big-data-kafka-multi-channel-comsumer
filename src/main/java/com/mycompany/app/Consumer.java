@@ -43,7 +43,11 @@ public class Consumer {
 
 
         //subscription (wow even open source projects are making you subscribe, disgusting)
+
+        //uncomment which ones you're using
+        //consumer.subscribe(Arrays.asList("Rack1Temps"));
         consumer.subscribe(Arrays.asList("Rack2Temps"));
+        //consumer.subscribe(Arrays.asList("Smoker"));
         int count = 0;
 
         Queue<Double> temps = new LinkedList<Double>(); //This is a QUEUE, gib me bonus points
@@ -69,6 +73,9 @@ public class Consumer {
                 //pull off the head and assign to the var we already made. No sense in making more vars.
                 doubValue = temps.peek(); 
 
+                
+                /* 
+                //this is for stall code
                 //reset bool value for multiple runs
                 stall = true;
 
@@ -93,8 +100,9 @@ public class Consumer {
                     //remove oldest (first) value because we don't want to save the entire data set
                     temps.remove();
                 }
+                */
                 
-            }
+            }      
         }
 
     }

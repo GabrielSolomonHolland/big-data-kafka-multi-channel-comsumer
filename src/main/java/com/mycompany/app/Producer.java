@@ -34,7 +34,7 @@ public class Producer {
         // MAKE THESE NAMES MAKE SENSE; DO NOT USE THE DEFAULTS
         channels.add("Rack1Temps");
         channels.add("Rack2Temps");
-        channels.add("Rack3Temps");
+        channels.add("Smoker");
 
         // option 2: set topic name
         //String topic = "";
