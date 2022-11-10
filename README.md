@@ -53,7 +53,8 @@ Write one or more consumers (depending on how you set up your producer with topi
 
 1. What times did the smoker need attention?
 1. What time did the food on channel 1 hit its stall?
-1. What time did the food on channel 2 hit its stall?
+   1. 05/22/21 12:20:15
+2. What time did the food on channel 2 hit its stall?
 
 You should use a sliding window approach to analyze our data.
 *You can receive one bonus point if you write your consumers so they do not store all historical data AND you use an appropriate data structure for the task*
