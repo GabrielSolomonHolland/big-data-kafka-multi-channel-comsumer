@@ -56,6 +56,7 @@ public class Consumer {
         Double doubValue = 0.0;
         String[] recordArr;
         Boolean stall;
+        //Boolean giveAttention;
 
         while(true) { //while true *vomit emoji*
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
@@ -73,8 +74,36 @@ public class Consumer {
                 //pull off the head and assign to the var we already made. No sense in making more vars.
                 doubValue = temps.peek(); 
 
-                
                 /* 
+                //this is for the smoker attention code
+                //reset bool value for multiple runs
+                giveAttention = false;
+
+                for(Double i:temps)
+                {
+                    //if temps drop 15 degrees over 2.5 minutes (5 datapoints)
+                    if(i>=doubValue+15 || i<=doubValue-15)
+                    {
+                        giveAttention = true;
+                        break;
+                    }
+                }
+
+                if(giveAttention)
+                {
+                    System.out.println("Give attention at: " + times.peek());
+                }
+                if(temps.size()>5)
+                {
+                    //remove oldest (first value) to not save entire dataset
+                    //System.out.println(temps);
+                    temps.remove();
+                    times.remove();
+                }
+                */
+
+                
+                
                 //this is for stall code
                 //reset bool value for multiple runs
                 stall = true;
@@ -99,8 +128,9 @@ public class Consumer {
                 {
                     //remove oldest (first) value because we don't want to save the entire data set
                     temps.remove();
+                    times.remove();
                 }
-                */
+                
                 
             }      
         }
