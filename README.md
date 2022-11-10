@@ -53,7 +53,6 @@ Write one or more consumers (depending on how you set up your producer with topi
 
 1. What times did the smoker need attention?
 1. What time did the food on channel 1 hit its stall?
-   1. 05/22/21 12:20:15
 2. What time did the food on channel 2 hit its stall?
 
 You should use a sliding window approach to analyze our data.
@@ -87,14 +86,22 @@ Submit to the course website a document (docx or pdf) with the following:
 
 1. Answers to the following questions:
     1. What times did the smoker need attention? Make sure to list ALL the times!
-       1. time
-
+       1. Give attention at: 05/22/21 20:16:45
+       2. Give attention at: 05/22/21 20:17:40
+       3. Give attention at: 05/22/21 20:17:45
+       4. Give attention at: 05/22/21 20:18:40
+       5. Give attention at: 05/22/21 20:18:45
+       6. Give attention at: 05/22/21 20:19:40
+       7. Give attention at: 05/22/21 20:19:45
     2. What time did the food on channel 1 hit its stall?
-       1. 05/22/21 12:20:15
+       1. Stall Starts at:  05/22/21 14:57:10
     3. What time did the food on channel 2 hit its stall?
-       1. 05/22/21 13:46:35
+       1. Stall Starts at:  05/22/21 17:12:35
     4. Do you think other windowing approaches or considering the entire temperature history would be more appropriate for the questions we are trying to answer?  Why or why not?
+    5. No, the way we have it is working fine. Our producer properly reads the windows, no need to change what isn't broken
 2. Screenshots of your code running *on your computer* showing the output that you generated.  Your screenshots must have some kind of indication that it is you running the code.
+   1. ![](rack1results.png)
+   2. ![](rack2results.png)
 
 Print your consumer code to PDF and submit it as a separate document.
 Visual Studio Code has an extension called `PrintCode` that will let you print from VS Code easily.
